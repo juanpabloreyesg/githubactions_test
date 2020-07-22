@@ -11,4 +11,11 @@ jobs:
         MI_VARIABLE: Hola mundo
       run: |
         echo $MI_VARIABLE.
+  Mi-segundo-job:
+    name: Mi segundo job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Imprimir 
+      run: |
+        echo el primer job dijo: $MI_VARIABLE.
 
