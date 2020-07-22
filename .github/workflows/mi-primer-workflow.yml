@@ -8,7 +8,8 @@ jobs:
     outputs:
       output: ${{ steps.imprimir.outputs.respuesta }}
     steps:
-    - id: imprimir 
+    - name: Imprimir
+      id: imprimir 
       env:
         MI_VARIABLE: Hola mundo
       run: echo "::set-output name=respuesta::${MI_VARIABLE}"
@@ -17,6 +18,7 @@ jobs:
     name: Mi segundo job
     runs-on: ubuntu-latest
     steps:
-    - id: Imprimir 
+    - name: Imprimir
+      id: imprimir 
       run: echo ${{needs.Mi-primer-job.outputs.output}}
 
