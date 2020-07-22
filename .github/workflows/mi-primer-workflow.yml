@@ -12,6 +12,7 @@ jobs:
       run: |
         echo $MI_VARIABLE.
   Mi-segundo-job:
+    needs: Mi-primer-job
     name: Mi segundo job
     runs-on: ubuntu-latest
     steps:
