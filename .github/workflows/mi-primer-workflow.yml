@@ -8,7 +8,7 @@ jobs:
     outputs:
       output: ${steps.imprimir.respuesta}
     steps:
-    - id: Imprimir 
+    - id: imprimir 
       env:
         MI_VARIABLE: Hola mundo
       run: echo "::set-output name=respuesta::hola"
