@@ -6,7 +6,7 @@ jobs:
     name: Mi primer job
     runs-on: ubuntu-latest
     outputs:
-      output: ${{ steps.imprimir.outputs.respuesta }}
+      salida: ${{ steps.imprimir.outputs.respuesta }}
     steps:
     - name: Imprimir
       id: imprimir 
@@ -20,5 +20,5 @@ jobs:
     steps:
     - name: Imprimir
       id: imprimir 
-      run: echo ${{needs.Mi-primer-job.outputs.output}}
+      run: echo ${{needs.Mi-primer-job.outputs.salida}}
 
