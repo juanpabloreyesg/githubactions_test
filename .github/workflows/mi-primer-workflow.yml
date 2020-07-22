@@ -11,13 +11,12 @@ jobs:
     - id: Imprimir 
       env:
         MI_VARIABLE: Hola mundo
-      run: echo "::set-output name=respuesta::hola".
+      run: echo "::set-output name=respuesta::hola"
   Mi-segundo-job:
     needs: Mi-primer-job
     name: Mi segundo job
     runs-on: ubuntu-latest
     steps:
     - id: Imprimir 
-      run: |
-        echo "el primer job dijo: ${{needs.Mi-primer-job.outputs.output}}".
+      run: echo ${{needs.Mi-primer-job.outputs.output}}
 
